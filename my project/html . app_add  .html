@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add AI App</title>
+  <link rel="stylesheet" href="css.Style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js.m.js" defer></script>
+</head>
+<body>
+  <h1>Add New AI Application</h1>
+  <form id="appForm">
+    <label for="appName">App Name:</label>
+    <input type="text" id="appName" name="appName" required><br>
+
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" required><br>
+
+    <label for="website">Website URL:</label>
+    <input type="url" id="website" name="website" required><br>
+
+    <label for="free">Is it Free?</label>
+    <select id="free" name="free">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select><br>
+
+    <label for="field">Field:</label>
+    <select id="field" name="field">
+      <option value="Robotics">Robotics</option>
+      <option value="Education">Education</option>
+      <option value="E-Commerce">E-Commerce</option>
+    </select><br>
+
+    <label for="description">Short Description:</label>
+    <textarea id="description" name="description" required></textarea><br>
+
+    <button type="submit">إرسال</button>
+    <button type="reset">إعادة</button>
+  </form>
+</body>
+</html>

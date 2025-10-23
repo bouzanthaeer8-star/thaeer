@@ -1,0 +1,16 @@
+﻿/* تنسيق الحقول النصية */
+input, textarea, select {
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* تنسيق التسميات */
+label {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}

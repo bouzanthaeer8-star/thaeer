@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Applications</title>
+  <link rel="stylesheet" href="css.Style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const appData = JSON.parse(localStorage.getItem('newApp'));
+      if (appData) {
+        $('#appsList').append(`
+          <div>
+            <h2>${appData.appName}</h2>
+            <p><strong>Company:</strong> ${appData.company}</p>
+            <p><strong>Website:</strong> <a href="${appData.website}" target="_blank">${appData.website}</a></p>
+            <p><strong>Free:</strong> ${appData.free}</p>
+            <p><strong>Field:</strong> ${appData.field}</p>
+            <p><strong>Description:</strong> ${appData.description}</p>
+          </div>
+        `);
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>AI Applications List</h1>
+  <div id="appsList"></div>
+</body>
+</html>

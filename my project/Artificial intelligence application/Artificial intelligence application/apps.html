@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحة التطبيقات</title>
+</head>
+<body>
+
+    <h2>صفحة التطبيقات (apps.html)</h2>
+    <p>جدول المعلومات:</p>
+
+    <table border="1" width="100%" cellpadding="6">
+        <tr>
+            <th>اسم التطبيق</th>
+            <th>اسم الشركة المصنّعة</th>
+            <th>مجال الاستخدام</th>
+            <th>مجاني / غير مجاني</th>
+            <th>عرض التفاصيل</th>
+        </tr>
+
+        <!-- تطبيق تليجرام -->
+        <tr>
+       <td>تليجرام</td>
+            <td>Telegram FZ LLC</td>
+                     <td>التواصل والمراسلة</td>
+            <td>مجاني</td>
+            <td><button onclick="toggleDetails('telegram')">&</button></td>
+        </tr>
+        <tr id="telegram" style="display:none;">
+            <td colspan="5">
+                <b>عنوان الموقع الإلكتروني:</b> <a href="https://telegram.org">https://telegram.org</a><br>
+                <b>شرح مختصر:</b> تطبيق مراسلة فورية مجاني وسريع وآمن.<br>
+                <b>صورة:</b><br>
+                <img src="telegram.jpg.jpeg" width="100"><br>
+                <b>مقطع فيديو:</b><br>
+                <video width="250" controls>
+                    <source src="telegram.mp4.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+        <!-- تطبيق بيكسل لاب -->
+        <tr>
+              <td>بيكسل لاب</td>
+            <td>Imaginstudio</td>
+                   <td>تحرير الصور والنصوص</td>
+            <td>مجاني</td>
+           <td><button onclick="toggleDetails('pixellab')">&</button></td>
+        </tr>
+        <tr id="pixellab" style="display:none;">
+            <td colspan="5">
+                <b>عنوان الموقع الإلكتروني:</b>
+                <a href="https://pixellabzone.com/pixellab-for-pc/">رابط جوجل بلاي</a><br>
+                <b>شرح مختصر:</b> تطبيق لتحرير الصور والنصوص وإضافة الملصقات بشكل احترافي.<br>
+                <b>صورة:</b><br>
+                <img src="pixellab.jpg.jpeg" width="100"><br>
+                <b>مقطع فيديو:</b><br>
+                <video width="250" controls>
+                    <source src="pixellab.mp4.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+        <!-- تطبيق شازام -->
+        <tr>
+            <td>شازام</td>
+              <td>Apple Inc.</td>
+            <td>التعرف على الموسيقى</td>
+         <td>مجاني</td>
+            <td><button onclick="toggleDetails('shazam')">&</button></td>
+        </tr>
+        <tr id="shazam" style="display:none;">
+            <td colspan="5">
+                <b>عنوان الموقع الإلكتروني:</b> <a href="https://www.shazam.com">https://www.shazam.com</a><br>
+                <b>شرح مختصر:</b> تطبيق يساعد على التعرف على الأغاني من خلال مقطع قصير.<br>
+                <b>صورة:</b><br>
+                <img src="shazam.jpg.jpeg" width="100"><br>
+                <b>مقطع فيديو:</b><br>
+                <video width="250" controls>
+                    <source src="shazam.mp4.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+        <!-- تطبيق كورسيرا -->
+        <tr>
+               <td>كورسيرا</td>
+            <td>Coursera Inc.</td>
+          <td>التعليم عبر الإنترنت</td>
+            <td>مجاني</td>
+               <td><button onclick="toggleDetails('coursera')">&</button></td>
+        </tr>
+        <tr id="coursera" style="display:none;">
+            <td colspan="5">
+                <b>عنوان الموقع الإلكتروني:</b> <a href="https://www.coursera.org">https://www.coursera.org</a><br>
+                <b>شرح مختصر:</b> منصة تعليمية تقدم دورات من جامعات عالمية في مختلف المجالات.<br>
+                <b>صورة:</b><br>
+                <img src="coursera.jpg.jpeg" width="100"><br>
+                <b>مقطع فيديو:</b><br>
+                <video width="250" controls>
+                    <source src="coursera.mp4.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+        <!-- تطبيق جوجل ماب -->
+        <tr>
+         <td>خرائط جوجل</td>
+            <td>Google LLC</td>
+           <td>الملاحة والخرائط</td>
+            <td>مجاني</td>
+            <td><button onclick="toggleDetails('maps')">&</button></td>
+        </tr>
+        <tr id="maps" style="display:none;">
+            <td colspan="5">
+                <b>عنوان الموقع الإلكتروني:</b> <a href="https://maps.google.com">https://maps.google.com</a><br>
+                <b>شرح مختصر:</b> تطبيق يوفر خرائط دقيقة وتوجيهات صوتية.<br>
+                <b>صورة:</b><br>
+                <img src="maps.jpg.jpeg" width="100"><br>
+                <b>مقطع فيديو:</b><br>
+                <video width="250" controls>
+                    <source src="mapsmp4.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+    </table>
+
+    <script>
+        function toggleDetails(id) {
+            var row = document.getElementById(id);
+            var btn = event.target;
+            if (row.style.display === "none") {
+                row.style.display = "table-row";
+                btn.textContent = "-";
+            } else {
+                row.style.display = "none";
+                btn.textContent = "&";
+            }
+        }
+    </script>
+
+</body>
+</html>
